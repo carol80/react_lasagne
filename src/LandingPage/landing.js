@@ -15,12 +15,7 @@ export default function App() {
       <Header />
       <div className="section-content rowC section1" paddingbottom="0px">
         <div style={{ paddingleft:"0px", width: "50%", textAlign: "left", color: "white" }}>
-          <br/>
-          <button style={{ background: "linear-gradient(90deg, rgba(29, 36, 63, 1) 5%, rgba(35, 46, 79, 1) 96%)", borderRadius: "50px", padding: "15px", color: "white", fontSize: "15px" }}>
-            Smart India Hackathon Project
-          </button>
-          <br/>
-          <h1 style={{ fontSize: "50px" }}>Textiles Detection</h1>
+          <h1 style={{ fontSize: "50px" }}>HandWriting Recognition</h1>
           <h3 sm={12} lg={4} >To configure this component to work with your existing app, you’ll need to import and call initImages, passing an object for configuration. imageResolver is where you will take the processed image object with calculated dimensions and generate a URL that conforms to how your CMS resizes images.</h3>
           <br/>
           <Button variant="contained" color="primary">

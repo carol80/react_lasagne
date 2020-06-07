@@ -12,7 +12,7 @@ export default function footer() {
             <br /><br />
             <FaCopyright />
             &nbsp;&nbsp;
-            2020 DATA PIRATES.  ALL RIGHTS RESERVED. PRIVACY POLICY
+            2020  IT'S LASAGNE BITCHES!!!.  ALL RIGHTS RESERVED. PRIVACY POLICY
         </div>
     </div>
   );
