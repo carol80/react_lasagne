@@ -1,11 +1,11 @@
 import React from "react";
 import { Button } from "@material-ui/core"
 import { GiMiner, GiMiningHelmet } from "react-icons/gi"
-import "./landing.css";
-import Header from "./header";
-import { PieChart,WorldMap } from "./charts.js"
-import TechStack from "./techstack"
-import Footer from "./footer"
+import "./Landing.css";
+import Header from "./Header";
+import { PieChart,WorldMap } from "./Charts.js"
+import TechStack from "./Techstack"
+import Footer from "./Footer"
 
 
 

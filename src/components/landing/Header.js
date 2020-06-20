@@ -9,7 +9,7 @@ import Fab from "@material-ui/core/Fab";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import Zoom from "@material-ui/core/Zoom";
 import { Button } from "@material-ui/core";
-import "./header.css";
+import "./Header.css";
 import { Link } from "react-scroll";
 import { FaBeer } from "react-icons/fa"
 
