@@ -1,12 +1,14 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import Landing from "./LandingPage/landing"
+// import Landing from "./LandingPage/landing"
+import ModelApp from "./ModelPage/ModelApp"
 
 function App() {
+  //<Landing />
   return (
     <div className="App">
-      <Landing />
+      <ModelApp />
     </div>
   );
 }
