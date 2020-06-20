@@ -11,7 +11,6 @@ import Zoom from "@material-ui/core/Zoom";
 import { Button } from "@material-ui/core";
 import "./Header.css";
 import { Link } from "react-scroll";
-import { FaBeer } from "react-icons/fa"
 import { useHistory } from "react-router-dom";
 
 import "./Header.css";
@@ -162,7 +161,7 @@ const BackToTop = props => {
           Tech-Stack
         </Link>
         </Button>
-          <Button variant="contained" onClick={() => history.push("/console")}>
+          <Button variant="contained" color="primary" onClick={() => history.push("/console")}>
             Go to Console
           </Button>
         </Toolbar>

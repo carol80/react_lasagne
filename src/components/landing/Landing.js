@@ -84,16 +84,6 @@ const Landing = () => {
               <h2>feature3</h2>
               <h5>The leading digital currency by market capitalization, has grown in value by more than 10 times.</h5>
               </Grid>
-            <Grid className="box" item lg={3} md={4} sm={6} xs={12}>
-              <GiMiningHelmet size="90px" color="blue"/>
-              <h2>feature4</h2>
-              <h5>The leading digital currency by market capitalization, has grown in value by more than 10 times.</h5>
-              </Grid>
-            <Grid className="box" item lg={3} md={4} sm={6} xs={12}>
-              <GiMiner size="90px" color="blue" />
-              <h2>feature5</h2>
-              <h5>The leading digital currency by market capitalization, has grown in value by more than 10 times.</h5>
-              </Grid>
           </Grid>
         </div>
       </div>
