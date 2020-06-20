@@ -15,6 +15,7 @@ import { FaBeer } from "react-icons/fa"
 import { useHistory } from "react-router-dom";
 
 import "./Header.css";
+import logo from "./images/logo.png"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -95,8 +96,7 @@ const BackToTop = props => {
       <AppBar className={classes.appBar} style={{ alignItems: 'center', justifyContent: 'center' }}>
       <Toolbar className={classes.toolBar}>
         <img
-            src={<FaBeer />}
-            // src="/logo192.png"
+            src={logo}
             className="nav-logo"
             alt="Logo"
             width="30"
