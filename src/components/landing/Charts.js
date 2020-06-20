@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 /* Imports */
 import * as am4core from "@amcharts/amcharts4/core";
@@ -11,16 +11,17 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 /* Chart code */
 
 
-class WorldMap extends Component {
-  componentDidMount() {
+const WorldMap = () => {
+  const cctvChart = useRef();
 
+  useEffect(() => {
     // Themes begin
     am4core.useTheme(am4themes_dark);
     am4core.useTheme(am4themes_animated);
     // Themes end
 
     // Create map instance
-    let chart = am4core.create("cctvChart", am4maps.MapChart);
+    let chart = am4core.create("cctvChart.current", am4maps.MapChart);
 
     // Set map definition
     chart.geodata = am4geodata_worldLow;
@@ -182,34 +183,29 @@ class WorldMap extends Component {
       "longitude": 28.1876,
       "color":colorSet
     } ];
-
-    this.chart = chart;
+  cctvChart.current = chart;
+  return () => {
+    cctvChart.current.dispose();
   }
+}, [])
 
-  componentWillUnmount() {
-    if (this.chart) {
-      this.chart.dispose();
-    }
-  }
-
-  render() {
-    return (
-      <div id="cctvChart" style={{ width: "50%", height: "450px"}}></div>
-    );
-  }
+  return (
+    <div style={{ width: "100%", height: '400px' }} ref={cctvChart} />
+  );
 }
 
 
 
-class PieChart extends Component {
-  componentDidMount() {
+const PieChart = () => {
+  const pieChart = useRef();
 
+  useEffect(() => {
     // Themes begin
     am4core.useTheme(am4themes_dark);
     am4core.useTheme(am4themes_animated);
     // Themes end
 
-    let chart = am4core.create("FeaturesChart", am4charts.PieChart3D);
+    let chart = am4core.create(pieChart.current, am4charts.PieChart3D);
     chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
 
     chart.data = [
@@ -267,20 +263,18 @@ class PieChart extends Component {
     series.slices.template.cornerRadius = 5;
     series.colors.step = 3;
 
-    this.chart = chart;
-  }
+    pieChart.current = chart;
 
-  componentWillUnmount() {
-    if (this.chart) {
-      this.chart.dispose();
+    return () => {
+      pieChart.current.dispose();
     }
-  }
+  }, [])
 
-  render() {
-    return (
-      <div id="FeaturesChart" style={{ width: "50%", height: "450px" }}></div>
-    );
-  }
+  return (
+    <div style={{ maxWidth: '90vw', overflowX: 'auto' }}>
+      <div style={{ width: '600px', height: '400px' }} ref={pieChart} />
+    </div>
+  );
 }
 
 export {
