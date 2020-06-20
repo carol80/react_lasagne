@@ -12,6 +12,7 @@ import { Button } from "@material-ui/core";
 import "./Header.css";
 import { Link } from "react-scroll";
 import { FaBeer } from "react-icons/fa"
+import logo from "./images/logo.png"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -82,7 +83,7 @@ export default function BackToTop(props) {
       <AppBar color="primary" style={{ alignItems: 'center', justifyContent: 'center' }}>
         <Toolbar>
         <img
-            src={<FaBeer />}
+            src={logo}
             className="nav-logo"
             alt="Logo"
           />
