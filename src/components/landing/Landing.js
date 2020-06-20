@@ -6,6 +6,7 @@ import Header from "./Header";
 import { PieChart,WorldMap } from "./Charts.js"
 import TechStack from "./Techstack"
 import Footer from "./Footer"
+// import FadeIn from "../utils/FadeIn";
 
 import "./Landing.css";
 
@@ -35,7 +36,7 @@ const Landing = () => {
             </Button>
           </Grid>
           <Grid className="inner-content" style={{ paddingLeft : "0px" }} item md={6} xs={12}>
-            <img src={require('./images/start.png')} className="start-img" alt="Start_image" />
+            <img src={require('./images/IT_Service_Management.png')} className="start-img" alt="Start_image" />
           </Grid>
         </Grid>
       </div>

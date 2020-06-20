@@ -1,21 +1,3 @@
-// import React from 'react';
-// // import logo from './logo.svg';
-// import './App.css';
-// import Landing from "./components/landing/Landing"
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <Landing />
-//       
-//     </div>
-//   );
-// }
-
-// export default App;
-
-
-
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -29,7 +11,7 @@ import { ThemeProvider } from "@material-ui/styles";
 import customTheme from './components/theme/theme.json';
 import { createMuiTheme } from "@material-ui/core/styles";
 
-import ResponsiveDrawer from "./components/utils/ResponsiveDrawer";
+// import ResponsiveDrawer from "./components/utils/ResponsiveDrawer";
 import ModelApp from "./components/ModelPage/ModelApp"
 // import Console from "./components/utils/Console";
 import Landing from "./components/landing/Landing";
@@ -45,10 +27,10 @@ const App = () => {
         <Landing />
       </Route>
       <Route path="/console" exact>
-        <ResponsiveDrawer>
+        {/* <ResponsiveDrawer> */}
           <ModelApp />
           {/* <Console /> */}
-        </ResponsiveDrawer>
+        {/* </ResponsiveDrawer> */}
       </Route>
       <Redirect to="/" />
     </Switch>

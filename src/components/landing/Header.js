@@ -14,7 +14,8 @@ import { Link } from "react-scroll";
 import { useHistory } from "react-router-dom";
 
 import "./Header.css";
-import logo from "./images/logo.png"
+// import logo from "./images/logo.png"
+import logo from "./images/robot1.png"
 
 const useStyles = makeStyles(theme => ({
   root: {
