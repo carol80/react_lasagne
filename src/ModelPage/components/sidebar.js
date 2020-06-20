@@ -15,6 +15,12 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
+import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
+
+import Hand from './Hand'
+import Ask from './Ask'
+import QandA from './QandA'
+import Default from './Default'
 
 const drawerWidth = 240;
 
@@ -80,6 +86,23 @@ export default function PersistentDrawerLeft() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
+  const [sidebar, setSidebar] = React.useState({ 'Hand' : false, 'QandA' : false, 'Ask' : false});
+
+  const handleSidebarState = (choose) => {
+      if (choose==='Hand') {
+        setSidebar({ 'Hand' : true, 'QandA' : false, 'Ask' : false})
+      }
+      else if (choose==='QandA'){
+        setSidebar({ 'Hand' : false, 'QandA' : true, 'Ask' : false})
+      }
+      else if (choose==='Ask'){
+        setSidebar({ 'Hand' : false, 'QandA' : false, 'Ask' : true})
+      }
+      else{
+        setSidebar({ 'Hand' : false, 'QandA' : false, 'Ask' : false})
+      }
+      
+  }
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -128,6 +151,7 @@ export default function PersistentDrawerLeft() {
         </div>
         <Divider />
         <List>
+            {/* Here use the function i have defined above to chnage the state */}
             <ListItem button key='HandwritingRecog'>
               <ListItemIcon>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 12h7v1.5h-7zm0-2.5h7V11h-7zm0 5h7V16h-7zM21 4H3c-1.1 0-2 .9-2 2v13c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 15h-9V6h9v13z"/></svg>								
@@ -156,20 +180,11 @@ export default function PersistentDrawerLeft() {
         })}
       >
         <div className={classes.drawerHeader} />
-        <Typography paragraph>
-          <h1>This is the awesome SideBar</h1>
-        </Typography>
-        <Typography paragraph>
-          Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
-          facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
-          tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat
-          consequat mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed
-          vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. In
-          hendrerit gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem et
-          tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin
-          nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
-          accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.
-        </Typography>
+        {/* Here u have to render new components as per sidebar click so make a state for that and render accordingly */}
+        {
+            sidebar.Hand ? <Hand /> : sidebar.QandA ? <QandA /> : sidebar.Ask ? <Ask /> : <Default />
+        }
+    
       </main>
     </div>
   );
