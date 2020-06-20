@@ -158,13 +158,13 @@ export default function PersistentDrawerLeft() {
               </ListItemIcon>
               <ListItemText primary='HandWriting Recogntition' />
             </ListItem>
-            <ListItem button key='AutomaticQuestionPaper' onClick= {() => handleSidebarState('QandA')>
+            <ListItem button key='AutomaticQuestionPaper' onClick= {() => handleSidebarState('QandA')}>
               <ListItemIcon>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>								
               </ListItemIcon>
               <ListItemText primary='Question Paper Generator' />
             </ListItem>
-            <ListItem button key='cdqa' onClick= {() => handleSidebarState('Ask')>
+            <ListItem button key='cdqa' onClick= {() => handleSidebarState('Ask')}>
               <ListItemIcon>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z"/></svg>
               </ListItemIcon>
