@@ -8,7 +8,7 @@ import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Fab from "@material-ui/core/Fab";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import Zoom from "@material-ui/core/Zoom";
-import { Button } from "@material-ui/core";
+import { Button,Typography } from "@material-ui/core";
 import "./Header.css";
 import { Link } from "react-scroll";
 import { useHistory } from "react-router-dom";
@@ -30,7 +30,15 @@ const useStyles = makeStyles(theme => ({
   toolBar: {
     width: '100vw',
     overflowY: 'auto',
-  }
+  },
+  logoTypo: {
+    marginLeft: "10px",
+    fontFamily: "Verdana, Geneva, sans-serif",
+  },
+  iconContainer: {
+    marginLeft: "400px",
+    padding: "10px 20px",
+  },
 }));
 
 const ScrollTop = props => {
@@ -102,69 +110,74 @@ const BackToTop = props => {
             width="30"
             height="30"
           />
-        <Button variant="h6">
-          <Link
-          activeClass="active"
-          to="section1"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-        >
-          Home
-        </Link>
-        </Button>
-        <Button variant="h6">
-          <Link
+        <Typography className={classes.logoTypo} variant="h6">
+          Lasange
+        </Typography>
+        <span className={classes.iconContainer}>
+          <Button variant="h6">
+            <Link
             activeClass="active"
-            to="section2"
+            to="section1"
             spy={true}
             smooth={true}
             offset={-70}
             duration={500}
           >
-            features
+            Home
           </Link>
-        </Button>
-        <Button variant="h6">
-        <Link
-          activeClass="active"
-          to="section3"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-        >
-          Model
-        </Link>
-        </Button>
-        <Button variant="h6">
-        <Link
-          activeClass="active"
-          to="section4"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-        >
-          Database
-        </Link>
-        </Button>
-        <Button variant="h6">
-        <Link
-          activeClass="active"
-          to="section5"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-        >
-          Tech-Stack
-        </Link>
-        </Button>
-          <Button variant="contained" color="primary" onClick={() => history.push("/console")}>
-            Go to Console
           </Button>
+          <Button variant="h6">
+            <Link
+              activeClass="active"
+              to="section2"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              features
+            </Link>
+          </Button>
+          <Button variant="h6">
+          <Link
+            activeClass="active"
+            to="section3"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            Model
+          </Link>
+          </Button>
+          <Button variant="h6">
+          <Link
+            activeClass="active"
+            to="section4"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            Database
+          </Link>
+          </Button>
+          <Button variant="h6">
+          <Link
+            activeClass="active"
+            to="section5"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            Tech-Stack
+          </Link>
+          </Button>
+            <Button variant="contained" color="primary" onClick={() => history.push("/console")}>
+              Go to Console
+            </Button>
+          </span>
         </Toolbar>
       </AppBar>
       <Toolbar id="back-to-top-anchor" />

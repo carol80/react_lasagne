@@ -9,7 +9,7 @@
          "default": "#001f42"
       },
       "primary": {
-         "light": "rgba(133, 59, 188, 1)",
+         "light": "white",
          "main": "#2db1e1",
          "dark": "rgba(21, 0, 93, 1)",
          "contrastText": "#fff"
