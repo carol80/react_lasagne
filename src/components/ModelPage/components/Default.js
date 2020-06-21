@@ -5,7 +5,7 @@ function Default() {
     return (
       <div >
         <Typography paragraph>
-          <h1>This is the awesome SideBar</h1>
+          <h1>Welcome to Teacher's Assisstant</h1>
         </Typography>
         <Typography paragraph>
           Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
