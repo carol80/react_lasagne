@@ -15,12 +15,10 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import AccessibilityIcon from '@material-ui/icons/Accessibility';
-import AddPhotoAlternateIcon from '@material-ui/icons/AddPhotoAlternate';
-import InsertChartIcon from '@material-ui/icons/InsertChart';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import AdbIcon from '@material-ui/icons/Adb';
 
-const drawerWidth = 240;
+const drawerWidth = 260;
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -82,13 +80,13 @@ const SideDrawer = props => {
           <Divider className={classes.divider} />
           <List>
             <ListSubheader component="div">
-              Handwriting Recognition
+              HANDWRITING RECOGNITION
             </ListSubheader>  
-            <ListItem button>
+            <ListItem button onClick={() => {pushLink('/HTRdocs')}}>
                   <ListItemIcon><Avatar><AssignmentIcon fontSize='small' /></Avatar></ListItemIcon>
                   <ListItemText primary="HTR Documentation" />
                 </ListItem>
-                <ListItem button>
+                <ListItem button onClick={() => {pushLink('/HTRdemo')}}>
                   <ListItemIcon><Avatar><AdbIcon fontSize='small' /></Avatar></ListItemIcon>
                   <ListItemText primary="Demo" />
                 </ListItem>
@@ -96,13 +94,13 @@ const SideDrawer = props => {
           <Divider className={classes.divider} />
           <List>
           <ListSubheader component="div">
-            Question and Answers
+            QUESTION & ANSWERS
           </ListSubheader>  
-          <ListItem button onClick={() => {pushLink('/store')}}>
+          <ListItem button onClick={() => {pushLink('/QandAdocs')}}>
                 <ListItemIcon><Avatar><AssignmentIcon fontSize='small' /></Avatar></ListItemIcon>
                 <ListItemText primary="Q/A Documentation" />
               </ListItem>
-              <ListItem button onClick={() => {pushLink('/upload')}}>
+              <ListItem button onClick={() => {pushLink('/QandAdemo')}}>
                 <ListItemIcon><Avatar><AdbIcon fontSize='small' /></Avatar></ListItemIcon>
                 <ListItemText primary="Demo" />
               </ListItem>
@@ -112,11 +110,11 @@ const SideDrawer = props => {
           <ListSubheader component="div">
             CDQA
           </ListSubheader>  
-          <ListItem button>
+          <ListItem button onClick={() => {pushLink('/CDQAdocs')}}>
                 <ListItemIcon><Avatar><AssignmentIcon fontSize='small' /></Avatar></ListItemIcon>
-                <ListItemText primary="cdqa Documentation" />
+                <ListItemText primary="CDQA Documentation" />
               </ListItem>
-              <ListItem button>
+              <ListItem button onClick={() => {pushLink('/CDQAdemo')}}>
                 <ListItemIcon><Avatar><AdbIcon fontSize='small' /></Avatar></ListItemIcon>
                 <ListItemText primary="Demo" />
               </ListItem>

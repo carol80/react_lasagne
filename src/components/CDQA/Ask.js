@@ -1,11 +1,11 @@
 import React from 'react'
 
-function QandA() {
+function Ask() {
     return (
       <div >
-        <h1>This is QandA</h1>
+          <h1>This is CDQA</h1>
       </div>
     );
   }
   
-  export default QandA;
+  export default Ask;

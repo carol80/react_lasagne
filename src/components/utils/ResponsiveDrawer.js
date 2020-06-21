@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 // import { Link } from 'react-router-dom';
 
 import PropTypes from 'prop-types';
@@ -36,8 +36,7 @@ const useStyles = makeStyles(theme => ({
   content: {
     flexGrow: 1,
   },
-  toolbar: theme.mixins.toolbar,
-    title: {
+  title: {
     flexGrow: 1,
   },
   logoTypo: {

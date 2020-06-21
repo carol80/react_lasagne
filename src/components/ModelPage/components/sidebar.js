@@ -17,10 +17,10 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 // import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
 
-import Hand from './Hand'
-import Ask from './Ask'
-import QandA from './QandA'
-import Default from './Default'
+import Hand from '../../HTR/Hand.js'
+import Ask from '../../CDQA/Ask.js'
+import QandA from '../../QA/QA.js'
+import Default from '../../console/Default.js'
 
 const drawerWidth = 240;
 

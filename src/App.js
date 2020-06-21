@@ -11,10 +11,16 @@ import { ThemeProvider } from "@material-ui/styles";
 import customTheme from './components/theme/theme.json';
 import { createMuiTheme } from "@material-ui/core/styles";
 
-// import ResponsiveDrawer from "./components/utils/ResponsiveDrawer";
+import ResponsiveDrawer from "./components/utils/ResponsiveDrawer";
 import ModelApp from "./components/ModelPage/ModelApp"
 // import Console from "./components/utils/Console";
 import Landing from "./components/landing/Landing";
+import CDQAdocs from "./components/CDQA/Ask.js"
+import CDQAdemo from "./components/CDQA/AskDemo.js"
+import HTRdocs from "./components/HTR/Hand.js"
+import HTRdemo from "./components/HTR/HandDemo.js"
+import QAdocs from "./components/QA/QA.js"
+import QAdemo from "./components/QA/QADemo.js"
 
 const theme = createMuiTheme(customTheme);
 
@@ -31,6 +37,42 @@ const App = () => {
           <ModelApp />
           {/* <Console /> */}
         {/* </ResponsiveDrawer> */}
+      </Route>
+      <Route path="/dashboard" exact>
+        <ResponsiveDrawer>
+          {/* <ModelApp /> */}
+          <HTRdocs />
+        </ResponsiveDrawer>
+      </Route>
+      <Route path="/HTRdocs" exact>
+        <ResponsiveDrawer>
+          <HTRdocs />
+        </ResponsiveDrawer>
+      </Route>
+      <Route path="/HTRdemo" exact>
+        <ResponsiveDrawer>
+          <HTRdemo />
+        </ResponsiveDrawer>
+      </Route>
+      <Route path="/QandAdocs" exact>
+        <ResponsiveDrawer>
+          <QAdocs />
+        </ResponsiveDrawer>
+      </Route>
+      <Route path="/QandAdemo" exact>
+        <ResponsiveDrawer>
+          <QAdemo />
+        </ResponsiveDrawer>
+      </Route>
+      <Route path="/CDQAdocs" exact>
+        <ResponsiveDrawer>
+          <CDQAdocs />
+        </ResponsiveDrawer>
+      </Route>
+      <Route path="/CDQAdemo" exact>
+        <ResponsiveDrawer>
+          <CDQAdemo />
+        </ResponsiveDrawer>
       </Route>
       <Redirect to="/" />
     </Switch>
