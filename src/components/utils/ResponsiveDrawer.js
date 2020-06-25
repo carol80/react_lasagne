@@ -12,6 +12,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Lasange from '../landing/images/robot1.png'
+import Logout from '../subscribe/logout';
 
 const drawerWidth = 240;
 
@@ -43,6 +44,10 @@ const useStyles = makeStyles(theme => ({
     marginLeft: "10px",
     fontFamily: "Verdana, Geneva, sans-serif",
   },
+  Typo: {
+    marginRight: "10px",
+    fontFamily: "Verdana, Geneva, sans-serif",
+  },
 }));
 
 const ResponsiveDrawer = props => {
@@ -71,19 +76,18 @@ const ResponsiveDrawer = props => {
           </IconButton>
           <Typography variant="h5">
             <Typography className={classes.logoTypo} variant="h6">
-            <img
-              src={Lasange}
-              className="nav-logo"
-              alt="Logo"
-              width="30"
-              height="30"
-            />
-            <span style={{ paddingLeft: '20px' }}>Lasange</span>
+              <img
+                src={Lasange}
+                className="nav-logo"
+                alt="Logo"
+                width="30"
+                height="30"
+              />
+              <span style={{ paddingLeft: '20px' }}>LASAGNE</span>
+            </Typography>
           </Typography>
-            {/* <span style={{ marginRight: '20px' }}>
-              <img width="30" src={Lasange} alt="lasange" />
-            </span>
-            <span style={{ marginRight: '20px' }}>Lasange</span> */}
+          <Typography className={classes.Typo} variant="h6">
+          <Logout />
           </Typography>
         </Toolbar>
       </AppBar>
