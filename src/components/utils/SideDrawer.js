@@ -68,11 +68,11 @@ const SideDrawer = props => {
               </ListItem>
           <Divider className={classes.divider} />
           <List>
-            <ListItem button onClick={() => {pushLink('/')}}>
+            <ListItem button onClick={() => {pushLink('/dashboard')}}>
               <ListItemIcon><Avatar><DashboardIcon fontSize='small' /></Avatar></ListItemIcon>
                 <ListItemText primary="Dashboard" />
               </ListItem>
-              <ListItem button>
+              <ListItem button onClick={() => {pushLink('/activity')}}>
                 <ListItemIcon><Avatar><AccessibilityIcon fontSize='small' /></Avatar></ListItemIcon>
                 <ListItemText primary="Activity" />
               </ListItem>
