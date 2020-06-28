@@ -29,66 +29,13 @@ const theme = createMuiTheme(customTheme);
 
 const App = () => {
   let routes;
-  let token;
-  let data = localStorage.getItem('userData')
-  if (data != null){
-    token = JSON.parse(data).token
-  }
 
-
-  if (token) {
-    routes = (
-      <Switch>
-        <Route path="/console" exact>
-            <ModelApp />
-        </Route>
-        <Route path="/dashboard" exact>
-          <ResponsiveDrawer>
-            <Dashboard />
-          </ResponsiveDrawer>
-        </Route>
-        <Route path="/activity" exact>
-          <ResponsiveDrawer>
-            <Activity />
-          </ResponsiveDrawer>
-        </Route>
-        <Route path="/HTRdocs" exact>
-          <ResponsiveDrawer>
-            <HTRdocs />
-          </ResponsiveDrawer>
-        </Route>
-        <Route path="/HTRdemo" exact>
-          <ResponsiveDrawer>
-            <HTRdemo />
-          </ResponsiveDrawer>
-        </Route>
-        <Route path="/QandAdocs" exact>
-          <ResponsiveDrawer>
-            <QAdocs />
-          </ResponsiveDrawer>
-        </Route>
-        <Route path="/QandAdemo" exact>
-          <ResponsiveDrawer>
-            <QAdemo />
-          </ResponsiveDrawer>
-        </Route>
-        <Route path="/CDQAdocs" exact>
-          <ResponsiveDrawer>
-            <CDQAdocs />
-          </ResponsiveDrawer>
-        </Route>
-        <Route path="/CDQAdemo" exact>
-          <ResponsiveDrawer>
-            <CDQAdemo />
-          </ResponsiveDrawer>
-        </Route>
-        <Redirect to="/dashboard" />
-      </Switch>
-    );
-  } else {
-    routes = (
-      <Switch>
-        <Route path="/" exact>
+  routes = (
+    <Switch>
+      <Route path="/console" exact>
+          <ModelApp />
+      </Route>
+      <Route path="/" exact>
           <Landing />
         </Route>
         <Route path="/SignUp" exact>
@@ -97,10 +44,49 @@ const App = () => {
         <Route path="/Login" exact>
           <Subscribe />
         </Route>
-        <Redirect to="/" />
-      </Switch>
-    );
-  }
+      <Route path="/dashboard" exact>
+        <ResponsiveDrawer>
+          <Dashboard />
+        </ResponsiveDrawer>
+      </Route>
+      <Route path="/activity" exact>
+        <ResponsiveDrawer>
+          <Activity />
+        </ResponsiveDrawer>
+      </Route>
+      <Route path="/HTRdocs" exact>
+        <ResponsiveDrawer>
+          <HTRdocs />
+        </ResponsiveDrawer>
+      </Route>
+      <Route path="/HTRdemo" exact>
+        <ResponsiveDrawer>
+          <HTRdemo />
+        </ResponsiveDrawer>
+      </Route>
+      <Route path="/QandAdocs" exact>
+        <ResponsiveDrawer>
+          <QAdocs />
+        </ResponsiveDrawer>
+      </Route>
+      <Route path="/QandAdemo" exact>
+        <ResponsiveDrawer>
+          <QAdemo />
+        </ResponsiveDrawer>
+      </Route>
+      <Route path="/CDQAdocs" exact>
+        <ResponsiveDrawer>
+          <CDQAdocs />
+        </ResponsiveDrawer>
+      </Route>
+      <Route path="/CDQAdemo" exact>
+        <ResponsiveDrawer>
+          <CDQAdemo />
+        </ResponsiveDrawer>
+      </Route>
+      <Redirect to="/" />
+    </Switch>
+  );
 
 
   return (

@@ -1,6 +1,5 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { useHistory } from 'react-router-dom';
-import { AuthContext } from "../subscribe/auth-context";
 
 import {
   Button,
@@ -13,8 +12,8 @@ import {
 
 
 const Logout = (className) => {
-  const auth = useContext(AuthContext);
   const [open, setOpen] = useState(false);
+  let history = useHistory();
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -26,7 +25,6 @@ const Logout = (className) => {
 
   const RemoveUser = () => {
     localStorage.removeItem('userData');
-    let history = useHistory();
     // <Redirect to="/" />
     history.push('/');
   };

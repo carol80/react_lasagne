@@ -174,7 +174,7 @@ const BackToTop = props => {
             Tech-Stack
           </Link>
           </Button>
-            <Button variant="contained" color="primary" onClick={() => history.push("/SignUp")}>
+            <Button variant="contained" color="primary" onClick={() => history.push("/dashboard")}>
               Go to Console
             </Button>
           </span>

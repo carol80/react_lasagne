@@ -1,10 +1,13 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useHistory, Link } from "react-router-dom";
 import { Formik } from "formik";
 import login from "./auth";
 import { useHttpClient } from "../hooks/http-hook";
-import { AuthContext } from "./auth-context";
+import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import Lasange from '../landing/images/robot1.png'
+// import Robot from "./robot.svg"
+import Trial from "./trial.svg"
 // import LoadingSpinner from "../utils/LoadingSpinner";
 // import Alert from "@material-ui/lab/Alert";
 import {
@@ -22,15 +25,13 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     backgroundRepeat: "no-repeat",
-    backgroundColor:
-      theme.palette.type === "dark"
-        ? theme.palette.grey[900]
-        : theme.palette.grey[50],
+    backgroundColor:"#008B8B",
     backgroundSize: "cover",
     backgroundPosition: "center",
+    background: "#4682B4"
   },
   paper: {
-    margin: theme.spacing(8, 4),
+    margin: theme.spacing(6, 4),
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -48,11 +49,17 @@ const useStyles = makeStyles((theme) => ({
   },
   main: {
     background: "linear-gradient(90deg, rgba(36,44,78,1) 0%, rgba(49,61,100,1) 29%, rgba(63,78,128,1) 51%, rgba(47,58,98,1) 75%, rgba(36,44,78,1) 100%)"
-  }
+  },
+  logoTypo: {
+    fontFamily: "Verdana, Geneva, sans-serif",
+    alignItems: "center",
+    color: "#FFFF00",
+    margin: theme.spacing(0, 0, 2),
+    textAlign: "center",
+  },
 }));
 
 const Signup = () => {
-  const auth = useContext(AuthContext);
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
   let history = useHistory();
 
@@ -61,6 +68,7 @@ const Signup = () => {
   return (
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
+      <Grid item xs={false} sm={4} md={7} className={classes.image}><img src={Trial} alt="My logo" /></ Grid>
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
         <div className={classes.paper}>
           <Formik
@@ -144,6 +152,13 @@ const Signup = () => {
             }) => (
               <form className={classes.form} onSubmit={handleSubmit}>
                 <Grid container spacing={2}>
+                <Grid item xs={12}>
+                  <div className={classes.logoTypo}>
+                    <img src={Lasange} alt="VIP" height="100px"/>
+                    <Typography>GET YOUR API KEY HERE!!</Typography>
+                  </div>
+                </Grid>
+                  
                   <Grid item xs={12} sm={6}>
                     <TextField
                       name="first"
