@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/react_lasagne/static/css/main.ea68bc16.chunk.css",
+    "main.js": "/react_lasagne/static/js/main.801a8ae5.chunk.js",
+    "main.js.map": "/react_lasagne/static/js/main.801a8ae5.chunk.js.map",
+    "runtime-main.js": "/react_lasagne/static/js/runtime-main.518ec3bb.js",
+    "runtime-main.js.map": "/react_lasagne/static/js/runtime-main.518ec3bb.js.map",
+    "xlsx.js": "/react_lasagne/static/js/xlsx.42d23660.chunk.js",
+    "xlsx.js.map": "/react_lasagne/static/js/xlsx.42d23660.chunk.js.map",
+    "static/js/3.f79a38bf.chunk.js": "/react_lasagne/static/js/3.f79a38bf.chunk.js",
+    "static/js/3.f79a38bf.chunk.js.map": "/react_lasagne/static/js/3.f79a38bf.chunk.js.map",
+    "static/js/4.5f98b30c.chunk.js": "/react_lasagne/static/js/4.5f98b30c.chunk.js",
+    "static/js/4.5f98b30c.chunk.js.map": "/react_lasagne/static/js/4.5f98b30c.chunk.js.map",
+    "static/js/5.976fe13a.chunk.js": "/react_lasagne/static/js/5.976fe13a.chunk.js",
+    "static/js/5.976fe13a.chunk.js.map": "/react_lasagne/static/js/5.976fe13a.chunk.js.map",
+    "static/js/6.3fabf4db.chunk.js": "/react_lasagne/static/js/6.3fabf4db.chunk.js",
+    "static/js/6.3fabf4db.chunk.js.map": "/react_lasagne/static/js/6.3fabf4db.chunk.js.map",
+    "index.html": "/react_lasagne/index.html",
+    "precache-manifest.a93d7c7d1401f3d25288a1d66a2c2585.js": "/react_lasagne/precache-manifest.a93d7c7d1401f3d25288a1d66a2c2585.js",
+    "service-worker.js": "/react_lasagne/service-worker.js",
+    "static/css/main.ea68bc16.chunk.css.map": "/react_lasagne/static/css/main.ea68bc16.chunk.css.map",
+    "static/js/3.f79a38bf.chunk.js.LICENSE.txt": "/react_lasagne/static/js/3.f79a38bf.chunk.js.LICENSE.txt",
+    "static/js/5.976fe13a.chunk.js.LICENSE.txt": "/react_lasagne/static/js/5.976fe13a.chunk.js.LICENSE.txt",
+    "static/js/6.3fabf4db.chunk.js.LICENSE.txt": "/react_lasagne/static/js/6.3fabf4db.chunk.js.LICENSE.txt",
+    "static/media/amcharts.png": "/react_lasagne/static/media/amcharts.a19da3c3.png",
+    "static/media/flask.png": "/react_lasagne/static/media/flask.af103f13.png",
+    "static/media/gridfs.png": "/react_lasagne/static/media/gridfs.6847457e.png",
+    "static/media/materialui.png": "/react_lasagne/static/media/materialui.a019edaf.png",
+    "static/media/reactjs.png": "/react_lasagne/static/media/reactjs.549a2528.png",
+    "static/media/robot1.png": "/react_lasagne/static/media/robot1.0bcc8c64.png",
+    "static/media/tensorflow.png": "/react_lasagne/static/media/tensorflow.ccd3039c.png",
+    "static/media/trial.svg": "/react_lasagne/static/media/trial.4680d3b3.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.518ec3bb.js",
+    "static/js/3.f79a38bf.chunk.js",
+    "static/css/main.ea68bc16.chunk.css",
+    "static/js/main.801a8ae5.chunk.js"
+  ]
+}
