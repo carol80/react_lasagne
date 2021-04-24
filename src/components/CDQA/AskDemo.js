@@ -1,5 +1,6 @@
 import React from 'react'
 import Upload from '../utils/Upload'
+import Paragraph_demo from './textarea'
 
 function AskDemo() {
     return (
@@ -8,6 +9,7 @@ function AskDemo() {
           <div>
             <Upload />
           </div>
+          <Paragraph_demo/>
       </div>
     );
   }
