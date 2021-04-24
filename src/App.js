@@ -24,6 +24,7 @@ import QAdemo from "./components/QA/QADemo.js"
 import Dashboard from "./components/dashboard/Dashboard"
 import Activity from "./components/dashboard/Activity"
 import Subscribe from "./components/subscribe/subscribe.js"
+// import Login from "./components/subscribe/Login"
 
 const theme = createMuiTheme(customTheme);
 
@@ -42,6 +43,7 @@ const App = () => {
           <Subscribe />
         </Route>
         <Route path="/Login" exact>
+          {/* <Login /> */}
           <Subscribe />
         </Route>
       <Route path="/dashboard" exact>

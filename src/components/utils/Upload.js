@@ -56,10 +56,16 @@ const useStyles = makeStyles(theme => ({
 
 const Upload = () => {
     const classes = useStyles();
+    var pdf_name = "";
 
     const onDrop = (accepted, rejected, links) => {
         if (accepted && accepted.length > 0) {
-            console.log(accepted[0])
+            console.log(accepted[0],accepted[1])
+            pdf_name = accepted[0]['name'];
+            console.log(pdf_name);
+        }
+        else{
+            alert("Upload PDFs or files with .pdf extensions!!")
         }
     }
 
@@ -71,8 +77,8 @@ const Upload = () => {
                         <div>
                             <MagicDropzone 
                                 className={classes.dropzone} 
-                                accept="video/mp4, video/x-m4v, video/*" 
-                                multiple={false} 
+                                accept=".pdf" 
+                                multiple={true} 
                                 onDrop={onDrop}
                             >
                                 <div className={classes.dropzoneContainer}>
@@ -89,6 +95,7 @@ const Upload = () => {
                     </Grid>
                     <Grid item md={5} sm={12} xs={12}>
                         <h1>h</h1>
+                        {pdf_name}
 
                     </Grid>
                 </Grid>

@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Signup = () => {
-  const { isLoading, error, sendRequest, clearError } = useHttpClient();
+  const { sendRequest } = useHttpClient();
   let history = useHistory();
 
   const classes = useStyles();
