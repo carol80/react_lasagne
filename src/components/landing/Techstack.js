@@ -10,6 +10,15 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { Link } from "@material-ui/core";
+import amcharts  from "./images/amcharts.png"
+import flask from "./images/flask.png"
+import materialui from "./images/materialui.png"
+import reactjs from "./images/reactjs.png"
+import tensorflow from "./images/tensorflow.png"
+import PyTorch from "./images/Pytorch.png"
+import whatsapp from "./images/whatsapp.png"
+import twilio from "./images/twilio.jpg"
+
 
 const useStyles = makeStyles({
   grid: {
@@ -43,23 +52,22 @@ const Techstack = () => {
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image={require("./images/tensorflow.png")}
+                image={tensorflow}
                 title="Tensorflow JS"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                  TensorFlow.JS
+                  TensorFlow
                 </Typography>
                 <Typography variant="body2" color="default" component="p">
-                  TensorFlow.js is an hardware-accelerated JavaScript library
-                  for training and deploying ML models.
+                  TensorFlow is an hardware-accelerated library for training and deploying ML models, based on differentiable programming.
                 </Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
               {/* <Link to="https://www.tensorflow.org/js" > */}
               <Button size="small" color="default">
-                <Link className={classes.Link} href="https://www.tensorflow.org/js">See More</Link>
+                <Link className={classes.Link} href="https://tensorflow.org/">See More</Link>
               </Button>
               {/* </Link>  */}
             </CardActions>
@@ -70,7 +78,33 @@ const Techstack = () => {
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image={require("./images/reactjs.png")}
+                image={PyTorch}
+                title="PyTorch"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  PyTorch
+                </Typography>
+                <Typography variant="body2" color="default" component="p">
+                  It is an open source ML library based on the Torch library, used for computer vision, natural language processing, Etc.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              {/* <Link to="https://www.tensorflow.org/js" > */}
+              <Button size="small" color="white">
+                <Link className={classes.Link} href="https://pytorch.org">See More</Link>
+              </Button>
+              {/* </Link>  */}
+            </CardActions>
+          </Card>
+        </Grid>
+        <Grid className={classes.grid} item xs={12} sm={6} md={3} lg={3}>
+          <Card className={classes.cardHeight} spacing={4}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image={reactjs}
                 title="React JS"
               />
               <CardContent>
@@ -97,7 +131,7 @@ const Techstack = () => {
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image={require("./images/flask.png")}
+                image={flask}
                 title="Flask"
               />
               <CardContent>
@@ -105,14 +139,13 @@ const Techstack = () => {
                   Flask
                 </Typography>
                 <Typography variant="body2" color="default" component="p">
-                  D3.js is a JavaScript library for producing dynamic,
-                  interactive data visualizations in web browsers.
+                  Flask is a micro web framework written in Python, where pre-existing third-party libraries provide common functions.
                 </Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
               <Button size="small" color="default">
-                <Link className={classes.Link} href="https://d3js.org/">See More</Link>
+                <Link className={classes.Link} href="https://flask.palletsprojects.com/">See More</Link>
               </Button>
             </CardActions>
           </Card>
@@ -122,7 +155,7 @@ const Techstack = () => {
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image={require("./images/materialui.png")}
+                image={materialui}
                 title="Material UI"
               />
               <CardContent>
@@ -149,61 +182,7 @@ const Techstack = () => {
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image={require("./images/mongodb.png")}
-                title="MongoDB Atlas"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  MongoDB Atlas
-                </Typography>
-                <Typography variant="body2" color="default" component="p">
-                  Material UI provides React components implementing <Link className={classes.Link} href="https://material.io/">Google's Material Design</Link>
-                  specification
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              {/* <Link to="https://www.tensorflow.org/js" > */}
-              <Button size="small" color="default">
-                <Link className={classes.Link} href="https://material-ui.com/">See More</Link>
-              </Button>
-              {/* </Link>  */}
-            </CardActions>
-          </Card>
-        </Grid>
-        <Grid className={classes.grid} item xs={12} sm={6} md={3} lg={3}>
-          <Card className={classes.cardHeight} spacing={4}>
-            <CardActionArea>
-              <CardMedia
-                className={classes.media}
-                image={require("./images/gridfs.png")}
-                title="Grid FS"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Grid FS
-                </Typography>
-                <Typography variant="body2" color="default" component="p">
-                  Material UI provides React components implementing <Link className={classes.Link} href="https://material.io/">Google's Material Design</Link>
-                  specification
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              {/* <Link to="https://www.tensorflow.org/js" > */}
-              <Button size="small" color="default">
-                <Link className={classes.Link} href="https://material-ui.com/">See More</Link>
-              </Button>
-              {/* </Link>  */}
-            </CardActions>
-          </Card>
-        </Grid>
-        <Grid className={classes.grid} item xs={12} sm={6} md={3} lg={3}>
-          <Card className={classes.cardHeight} spacing={4}>
-            <CardActionArea>
-              <CardMedia
-                className={classes.media}
-                image={require("./images/amcharts.png")}
+                image={amcharts}
                 title="AMcharts"
               />
               <CardContent>
@@ -211,15 +190,66 @@ const Techstack = () => {
                   AMcharts
                 </Typography>
                 <Typography variant="body2" color="default" component="p">
-                  Material UI provides React components implementing <Link className={classes.Link} href="https://material.io/">Google's Material Design</Link>
-                  specification
+                  A go-to library for data visualization. When you need a simple yet powerful and flexible drop-in data visualization solution.
                 </Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
               {/* <Link to="https://www.tensorflow.org/js" > */}
               <Button size="small" color="white">
-                <Link className={classes.Link} href="https://material-ui.com/">See More</Link>
+                <Link className={classes.Link} href="https://amcharts.com/">See More</Link>
+              </Button>
+              {/* </Link>  */}
+            </CardActions>
+          </Card>
+        </Grid>
+        <Grid className={classes.grid} item xs={12} sm={6} md={3} lg={3}>
+          <Card className={classes.cardHeight} spacing={4}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image={whatsapp}
+                title="WhatsApp"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  WhatsApp
+                </Typography>
+                <Typography variant="body2" color="default" component="p">
+                  It is an American freeware, cross-platform centralized messaging and voice-over-IP service owned by Facebook.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              {/* <Link to="https://www.tensorflow.org/js" > */}
+              <Button size="small" color="white">
+                <Link className={classes.Link} href="https://whatsapp.com/">See More</Link>
+              </Button>
+              {/* </Link>  */}
+            </CardActions>
+          </Card>
+        </Grid>
+        <Grid className={classes.grid} item xs={12} sm={6} md={3} lg={3}>
+          <Card className={classes.cardHeight} spacing={4}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image={twilio}
+                title="Twilio API"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Twilio API
+                </Typography>
+                <Typography variant="body2" color="default" component="p">
+                  It allows programmatical phone calls, text messages, and perform other communication functions using its web service APIs.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              {/* <Link to="https://www.tensorflow.org/js" > */}
+              <Button size="small" color="white">
+                <Link className={classes.Link} href="https://twilio.com/">See More</Link>
               </Button>
               {/* </Link>  */}
             </CardActions>

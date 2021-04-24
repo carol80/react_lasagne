@@ -1,5 +1,7 @@
 import React from "react";
 import { FaGithub, FaCopyright } from 'react-icons/fa'
+import { Link } from "@material-ui/core";
+
 
 
 export default function footer() {
@@ -8,7 +10,7 @@ export default function footer() {
         <div style={{ color:'white', padding: '30px', textAlign:'center'}}>
             <FaGithub  size="40px" href="#"/>
             <br /><br />
-            View the code Here.
+            View the code <Link style={{ color: "Lightgreen" }} href="https://github.com/carol80/react_lasagne">Here</Link>.
             <br /><br />
             <FaCopyright />
             &nbsp;&nbsp;
