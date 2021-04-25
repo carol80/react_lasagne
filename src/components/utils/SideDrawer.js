@@ -17,6 +17,8 @@ import DashboardIcon from '@material-ui/icons/Dashboard';
 import AccountTreeIcon from '@material-ui/icons/AccountTree';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import AddToHomeScreenSharpIcon from '@material-ui/icons/AddToHomeScreenSharp';
+import NaturePeopleSharpIcon from '@material-ui/icons/NaturePeopleSharp';
 import { Link } from "@material-ui/core";
 
 const drawerWidth = 260;
@@ -77,6 +79,10 @@ const SideDrawer = props => {
                 <ListItemIcon><Avatar><AccountTreeIcon fontSize='small' /></Avatar></ListItemIcon>
                 <ListItemText primary="System Architecture" />
               </ListItem>
+              <ListItem button onClick={() => {pushLink('/')}}>
+              <ListItemIcon><Avatar><AddToHomeScreenSharpIcon fontSize='small' /></Avatar></ListItemIcon>
+                <ListItemText primary="Overview" />
+              </ListItem>
           </List>
           <Divider className={classes.divider} />
           <List>
@@ -108,10 +114,14 @@ const SideDrawer = props => {
           </List>
           <Divider className={classes.divider} />
           <List>
-            <ListItem button onClick={() => {pushLink('/dashboard')}}>
+            <ListItem button onClick={() => {pushLink('/Demo')}}>
+                <ListItemIcon><Avatar><NaturePeopleSharpIcon fontSize='small' /></Avatar></ListItemIcon>
+                <ListItemText primary="Demonstration" />
+            </ListItem>
+            <ListItem button >
               <ListItemIcon><Avatar><GitHubIcon fontSize='small' /></Avatar></ListItemIcon>
-                <Link style={{ color: "Lightgreen" }} href="https://github.com/carol80/react_lasagne"><ListItemText primary="GITHUB REPOSITORY" /></Link>
-              </ListItem>
+                <Link href="https://github.com/carol80/react_lasagne"><ListItemText primary="Github Repository" /></Link>
+            </ListItem>
           </List>
         </div>
       );
