@@ -148,7 +148,9 @@ const Landing = () => {
         <div className="inner-content">
           <div className="inner-content">
             <h1 className="Headers">OUR TEAM</h1>
+            <div style={{ alignItems:"center" }}>
             <TeamChart />
+            </div>
           </div>
         </div>
       </div>
