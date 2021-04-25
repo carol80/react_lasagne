@@ -127,6 +127,18 @@ const BackToTop = props => {
           </Link>
           </Button>
           <Button variant="h6">
+          <Link
+            activeClass="active"
+            to="section3"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            ABOUT
+          </Link>
+          </Button>
+          <Button variant="h6">
             <Link
               activeClass="active"
               to="section2"
@@ -141,13 +153,13 @@ const BackToTop = props => {
           <Button variant="h6">
           <Link
             activeClass="active"
-            to="section3"
+            to="section5"
             spy={true}
             smooth={true}
             offset={-70}
             duration={500}
           >
-            Model
+            Tech-Stack
           </Link>
           </Button>
           <Button variant="h6">
@@ -159,24 +171,12 @@ const BackToTop = props => {
             offset={-70}
             duration={500}
           >
-            Database
+            Team
           </Link>
           </Button>
-          <Button variant="h6">
-          <Link
-            activeClass="active"
-            to="section5"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            Tech-Stack
-          </Link>
+          <Button variant="contained" color="primary" onClick={() => history.push("/dashboard")}>
+            Go to Console
           </Button>
-            <Button variant="contained" color="primary" onClick={() => history.push("/dashboard")}>
-              Go to Console
-            </Button>
           </span>
         </Toolbar>
       </AppBar>

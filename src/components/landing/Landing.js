@@ -8,10 +8,11 @@ import { BiDesktop } from "react-icons/bi";
 
 import { useHistory } from "react-router-dom";
 import Header from "./Header";
-import { PieChart,WorldMap } from "./Charts.js"
+import { PieChart,WordChart,TeamChart } from "./Charts.js"
 import TechStack from "./Techstack"
 import Footer from "./Footer"
 import start_image from "./images/IT_Service_Management.png"
+import research_paper from "./images/BE_Research_Paper.pdf"
 // import FadeIn from "../utils/FadeIn";
 
 import "./Landing.css";
@@ -40,6 +41,10 @@ const Landing = () => {
             <Button variant="outlined" color="primary" href="https://github.com/carol80/react_lasagne">
               Github
             </Button>
+            &nbsp;&nbsp;&nbsp; 
+            <Button variant="outlined" color="primary" href={ research_paper }>
+              Research Paper
+            </Button>
           </Grid>
           <Grid className="inner-content" style={{ paddingLeft : "0px" }} item md={6} xs={12}>
             <img src={ start_image } className="start-img" alt="landing_image" />
@@ -47,8 +52,26 @@ const Landing = () => {
         </Grid>
       </div>
 
-      <div className="section-content section2" style={{ background: "#111"}}>
+
+      <div className="section-content section3">
         <div className="inner-content">
+          <h1 className="Headers">ABOUT THE PROJECT</h1>
+          <br/>
+          <Grid container>
+            <Grid item md={6} sm={12} xs={12} style={{ paddingLeft : "20px", textAlign: "left" }}>
+              <h1 style={{ color: "lightgreen" }}>Virtual assistance using question generation/ Answering</h1>
+              <h4>(Abstract)</h4>
+              <h3>Question Generation and Answering, being a challenging task, has gained considerable attention in the past years. Even though significant milestones are achieved, when used in a real-time system, it needs indispensable optimization. This paper proposes an approach to developing an online platform that facilitates traditional processes by introducing a virtual assistant to support educational programs by asking questions in natural language and getting an answer without reading the internal documents relevant to the problem. The system put forward is a cloud-based solution that automatically generates questions and provides sample answers from a given document(s). The entire architecture integrated into the WhatsApp interface with Twilio API's help offers a user-friendly experience.</h3>
+            </Grid>
+            <Grid item md={6} sm={12} style={{ paddingLeft: '10px'}}>
+              <PieChart />
+            </Grid>
+          </Grid>
+        </div>
+      </div>
+
+
+      <div className="section-content section2" style={{ background: "#111"}}>
           <h1 className="Headers">FEATURES</h1>
           <Grid container>
             <Grid className="box" item lg={3} md={4} sm={6} xs={12}>
@@ -92,25 +115,9 @@ const Landing = () => {
               <h5>The system instantly redirects requests to a backup system in case of a failure, ensuring maximum systems availability.</h5>
               </Grid>
           </Grid>
-        </div>
       </div>
 
-      <div className="section-content section3">
-        <h1 className="Headers">ABOUT THE PROJECT</h1>
-        <br/>
-      <Grid container>
-          <Grid item md={6} sm={12} xs={12} style={{ paddingLeft : "20px", textAlign: "left" }}>
-            <h1 style={{ color: "lightgreen" }}>Virtual assistance using question generation/ Answering</h1>
-            <h4>(Abstract)</h4>
-            <h3>Question Generation and Answering, being a challenging task, has gained considerable attention in the past years. Even though significant milestones are achieved, when used in a real-time system, it needs indispensable optimization. This paper proposes an approach to developing an online platform that facilitates traditional processes by introducing a virtual assistant to support educational programs by asking questions in natural language and getting an answer without reading the internal documents relevant to the problem. The system put forward is a cloud-based solution that automatically generates questions and provides sample answers from a given document(s). The entire architecture integrated into the WhatsApp interface with Twilio API's help offers a user-friendly experience.</h3>
-          </Grid>
-          <Grid item md={6} sm={12} style={{ paddingLeft: '10px'}}>
-            <PieChart />
-          </Grid>
-      </Grid>
-      </div>
-
-      <div className="section-content section4" style={{ background: "#111" }}>
+      {/* <div className="section-content section4" style={{ background: "#111" }}>
       <h1 className="Headers">Prepration of the Database</h1>
       <Grid container>
         <Grid item md={6} sm={12}>
@@ -121,14 +128,32 @@ const Landing = () => {
           <h3 style={{ padding: '0px 15px', color: 'white' }}>To configure this component to work with your existing app, you’ll need to import and call initImages, passing an object for configuration. imageResolver is where you will take the processed image object with calculated dimensions and generate a URL that conforms to how your CMS resizes images.<br></br>The example below connects to a local instance of image-steam and will resize image based on the users viewport and pixel density.</h3>
         </Grid>
       </Grid>
-      </div>
+      </div> */}
+
+    <div className="section-content">
+      <WordChart />
+    </div>
+
 
       <div className="section-content section5" style={{ padding: "0px", background: "#111" }}>
         <div className="inner-content">
-        <h1 className="Headers">Technologies Used</h1>
-          <TechStack />
+          <div className="inner-content">
+            <h1 className="Headers">TECH-STACK</h1>
+            <TechStack />
+          </div>
         </div>
       </div>
+
+
+      <div className="section-content section4" style={{ padding: "0px", background: "#111" }}>
+        <div className="inner-content">
+          <div className="inner-content">
+            <h1 className="Headers">OUR TEAM</h1>
+            <TeamChart />
+          </div>
+        </div>
+      </div>
+
       <Footer />
     </div>
   );
