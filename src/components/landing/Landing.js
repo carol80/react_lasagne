@@ -148,7 +148,7 @@ const Landing = () => {
         <div className="inner-content">
           <div className="inner-content">
             <h1 className="Headers">OUR TEAM</h1>
-            <div style={{ alignItems:"center" }}>
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
             <TeamChart />
             </div>
           </div>

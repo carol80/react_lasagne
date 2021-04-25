@@ -29,6 +29,7 @@ const useStyles = makeStyles(theme => ({
   },
   toolBar: {
     width: '100vw',
+    height: '10vh',
     overflowY: 'auto',
   },
   logoTypo: {
@@ -44,9 +45,6 @@ const useStyles = makeStyles(theme => ({
 const ScrollTop = props => {
   const { children, window } = props;
   const classes = useStyles();
-  // Note that you normally won't need to set the window ref as useScrollTrigger
-  // will default to window.
-  // This is only being set here because the demo is in an iframe.
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
     disableHysteresis: true,
@@ -71,19 +69,6 @@ const ScrollTop = props => {
     </Zoom>
   );
 }
-
-// $(document).ready(function() {
-//   $(window).scroll(function() {
-//     var height = $(".first-container").height();
-//     var scrollTop = $(window).scrollTop();
-
-//     if (scrollTop >= height - 40) {
-//       $(".nav-container").addClass("solid-nav");
-//     } else {
-//       $(".nav-container").removeClass("solid-nav");
-//     }
-//   });
-// });
 
 ScrollTop.propTypes = {
   children: PropTypes.element.isRequired,
