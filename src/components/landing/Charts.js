@@ -77,7 +77,7 @@ const PieChart = () => {
 
   return (
     <div style={{ maxWidth: '90vw', overflowX: 'auto' }}>
-      <div style={{ width: '600px', height: '400px' }} ref={pieChart} />
+      <div style={{ width: '500px', height: '350px' }} ref={pieChart} />
     </div>
   );
 }

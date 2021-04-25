@@ -32,7 +32,7 @@ const Landing = () => {
             </button>
             <br/>
             <h1 style={{ padding: '10px', fontSize: '50px' }}>Virtual Assistant</h1>
-            <h3 style={{ padding: '10px' }}>To configure this component to work with your existing app, you’ll need to import and call initImages, passing an object for configuration. imageResolver is where you will take the processed image object with calculated dimensions and generate a URL that conforms to how your CMS resizes images.</h3>
+            <h3 style={{ padding: '10px', color: "gray" }}>To configure this component to work with your existing app, you’ll need to import and call initImages, passing an object for configuration. imageResolver is where you will take the processed image object with calculated dimensions and generate a URL that conforms to how your CMS resizes images.</h3>
             <br/>
             <Button variant="contained" color="primary" onClick={() => history.push("/dashboard")}>
               Go to Console
@@ -60,10 +60,9 @@ const Landing = () => {
           <Grid container>
             <Grid item md={6} sm={12} xs={12} style={{ paddingLeft : "20px", textAlign: "left" }}>
               <h1 style={{ color: "lightgreen" }}>Virtual assistance using question generation/ Answering</h1>
-              <h4>(Abstract)</h4>
-              <h3>Question Generation and Answering, being a challenging task, has gained considerable attention in the past years. Even though significant milestones are achieved, when used in a real-time system, it needs indispensable optimization. This paper proposes an approach to developing an online platform that facilitates traditional processes by introducing a virtual assistant to support educational programs by asking questions in natural language and getting an answer without reading the internal documents relevant to the problem. The system put forward is a cloud-based solution that automatically generates questions and provides sample answers from a given document(s). The entire architecture integrated into the WhatsApp interface with Twilio API's help offers a user-friendly experience.</h3>
+              <h3 style={{ color: "gray" }}>Question Generation and Answering, being a challenging task, has gained considerable attention in the past years. Even though significant milestones are achieved, when used in a real-time system, it needs indispensable optimization. This paper proposes an approach to developing an online platform that facilitates traditional processes by introducing a virtual assistant to support educational programs by asking questions in natural language and getting an answer without reading the internal documents relevant to the problem. The system put forward is a cloud-based solution that automatically generates questions and provides sample answers from a given document(s). The entire architecture integrated into the WhatsApp interface with Twilio API's help offers a user-friendly experience.</h3>
             </Grid>
-            <Grid item md={6} sm={12} style={{ paddingLeft: '10px'}}>
+            <Grid item md={6} sm={12} style={{ paddingTop: '40px', display: "flex", justifyContent: "center", alignItems: "center"}}>
               <PieChart />
             </Grid>
           </Grid>
@@ -77,42 +76,42 @@ const Landing = () => {
             <Grid className="box" item lg={3} md={4} sm={6} xs={12}>
               <AiOutlineWhatsApp size="90px" color="blue" />
               <h2>WhatsApp Interface</h2>
-              <h5>It's a fast, simple, and convenient way to chat, share photos and videos, send and receive documents, and engage in private, secure conversations.</h5>
+              <h5 style={{ color: "gray" }}>It's a fast, simple, and convenient way to chat, share photos and videos, send and receive documents, and engage in private, secure conversations.</h5>
               </Grid>
             <Grid className="box" item lg={3} md={4} sm={6} xs={12}>
               <VscExpandAll size="90px" color="blue"/>
               <h2>Scalable Architecture</h2>
-              <h5>An architecture that can scale up to meet increased work loads.</h5>
+              <h5 style={{ color: "gray" }}>An architecture that can scale up to meet increased work loads.</h5>
               </Grid>
             <Grid className="box" item lg={3} md={4} sm={6} xs={12}>
               <DiDocker size="90px" color="blue" />
               <h2>Dockerization of Server Script</h2>
-              <h5>Automates the deployment of software applications inside containers by providing an additional layer of abstraction and automation of OS-level virtualization.</h5>
+              <h5 style={{ color: "gray" }}>Automates the deployment of software applications inside containers by providing an additional layer of abstraction and automation of OS-level virtualization.</h5>
               </Grid>
             <Grid className="box" item lg={3} md={4} sm={6} xs={12}>
               <BiDesktop size="90px" color="blue"/>
               <h2>Responsive Web App Development</h2>
-              <h5>Designs that accommodate different screen sizes, so the content looks great on any screen size.</h5>
+              <h5 style={{ color: "gray" }}>Designs that accommodate different screen sizes, so the content looks great on any screen size.</h5>
               </Grid>
             <Grid className="box" item lg={3} md={4} sm={6} xs={12}>
               <AiTwotoneApi size="90px" color="blue" />
               <h2>Use of Inhouse Developed APIs</h2>
-              <h5>Rather than being dependent of some thrid party library, we have Inhouse custom APIs.</h5>
+              <h5 style={{ color: "gray" }}>Rather than being dependent of some thrid party library, we have Inhouse custom APIs.</h5>
               </Grid>
             <Grid className="box" item lg={3} md={4} sm={6} xs={12}>
               <DiOpensource size="90px" color="blue" />
               <h2>Use of OpenSource Technologies</h2>
-              <h5>Open source is generally much more cost-effective than a proprietary solution. They also give enterprises the ability to start small and scale.</h5>
+              <h5 style={{ color: "gray" }}>Open source is generally much more cost-effective than a proprietary solution. They also give enterprises the ability to start small and scale.</h5>
               </Grid>
             <Grid className="box" item lg={3} md={4} sm={6} xs={12}>
               <GiInfinity size="90px" color="blue"/>
               <h2>Continuous Integration and Deployment Pipeline</h2>
-              <h5>Monitoring and automating to improve the process of application development, integration, testing phases, delivery and deployment.</h5>
+              <h5 style={{ color: "gray" }}>Monitoring and automating to improve the process of application development, integration, testing phases, delivery and deployment.</h5>
               </Grid>
             <Grid className="box" item lg={3} md={4} sm={6} xs={12}>
               <GiClockwork size="90px" color="blue" />
               <h2>High Availability and Failover Architecture </h2>
-              <h5>The system instantly redirects requests to a backup system in case of a failure, ensuring maximum systems availability.</h5>
+              <h5 style={{ color: "gray" }}>The system instantly redirects requests to a backup system in case of a failure, ensuring maximum systems availability.</h5>
               </Grid>
           </Grid>
       </div>

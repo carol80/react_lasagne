@@ -12,7 +12,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Lasange from '../landing/images/robot1.png'
-import Logout from '../subscribe/logout';
 
 const drawerWidth = 240;
 
@@ -85,9 +84,6 @@ const ResponsiveDrawer = props => {
               />
               <span style={{ paddingLeft: '20px' }}>LASAGNE</span>
             </Typography>
-          </Typography>
-          <Typography className={classes.Typo} variant="h6">
-          <Logout />
           </Typography>
         </Toolbar>
       </AppBar>

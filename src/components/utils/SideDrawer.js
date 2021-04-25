@@ -14,9 +14,10 @@ import AppsIcon from '@material-ui/icons/Apps';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
 import DashboardIcon from '@material-ui/icons/Dashboard';
-import AccessibilityIcon from '@material-ui/icons/Accessibility';
+import AccountTreeIcon from '@material-ui/icons/AccountTree';
 import AssignmentIcon from '@material-ui/icons/Assignment';
-import AdbIcon from '@material-ui/icons/Adb';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import { Link } from "@material-ui/core";
 
 const drawerWidth = 260;
 
@@ -70,56 +71,48 @@ const SideDrawer = props => {
           <List>
             <ListItem button onClick={() => {pushLink('/dashboard')}}>
               <ListItemIcon><Avatar><DashboardIcon fontSize='small' /></Avatar></ListItemIcon>
-                <ListItemText primary="Dashboard" />
+                <ListItemText primary="Description" />
               </ListItem>
               <ListItem button onClick={() => {pushLink('/activity')}}>
-                <ListItemIcon><Avatar><AccessibilityIcon fontSize='small' /></Avatar></ListItemIcon>
-                <ListItemText primary="Activity" />
+                <ListItemIcon><Avatar><AccountTreeIcon fontSize='small' /></Avatar></ListItemIcon>
+                <ListItemText primary="System Architecture" />
               </ListItem>
           </List>
           <Divider className={classes.divider} />
           <List>
-            <ListSubheader component="div">
-              HANDWRITING RECOGNITION
-            </ListSubheader>  
-            <ListItem button onClick={() => {pushLink('/HTRdocs')}}>
-                  <ListItemIcon><Avatar><AssignmentIcon fontSize='small' /></Avatar></ListItemIcon>
-                  <ListItemText primary="HTR Documentation" />
-                </ListItem>
-                <ListItem button onClick={() => {pushLink('/HTRdemo')}}>
-                  <ListItemIcon><Avatar><AdbIcon fontSize='small' /></Avatar></ListItemIcon>
-                  <ListItemText primary="Demo" />
-                </ListItem>
-            </List>
-          <Divider className={classes.divider} />
-          <List>
           <ListSubheader component="div">
-            QUESTION & ANSWERS
+            CLOSED DOMAIN QA
           </ListSubheader>  
           <ListItem button onClick={() => {pushLink('/QandAdocs')}}>
                 <ListItemIcon><Avatar><AssignmentIcon fontSize='small' /></Avatar></ListItemIcon>
-                <ListItemText primary="Q/A Documentation" />
+                <ListItemText primary="QA Documentation" />
               </ListItem>
               <ListItem button onClick={() => {pushLink('/QandAdemo')}}>
-                <ListItemIcon><Avatar><AdbIcon fontSize='small' /></Avatar></ListItemIcon>
-                <ListItemText primary="Demo" />
+                <ListItemIcon><Avatar><AccountTreeIcon fontSize='small' /></Avatar></ListItemIcon>
+                <ListItemText primary="QA Architecture" />
               </ListItem>
           </List>
           <Divider className={classes.divider} />
           <List>
           <ListSubheader component="div">
-            CDQA
+            CLOSED DOMAIN QG
           </ListSubheader>  
           <ListItem button onClick={() => {pushLink('/CDQAdocs')}}>
                 <ListItemIcon><Avatar><AssignmentIcon fontSize='small' /></Avatar></ListItemIcon>
-                <ListItemText primary="CDQA Documentation" />
+                <ListItemText primary="QG Documentation" />
               </ListItem>
               <ListItem button onClick={() => {pushLink('/CDQAdemo')}}>
-                <ListItemIcon><Avatar><AdbIcon fontSize='small' /></Avatar></ListItemIcon>
-                <ListItemText primary="Demo" />
+                <ListItemIcon><Avatar><AccountTreeIcon fontSize='small' /></Avatar></ListItemIcon>
+                <ListItemText primary="QG Architecture" />
               </ListItem>
           </List>
           <Divider className={classes.divider} />
+          <List>
+            <ListItem button onClick={() => {pushLink('/dashboard')}}>
+              <ListItemIcon><Avatar><GitHubIcon fontSize='small' /></Avatar></ListItemIcon>
+                <Link style={{ color: "Lightgreen" }} href="https://github.com/carol80/react_lasagne"><ListItemText primary="GITHUB REPOSITORY" /></Link>
+              </ListItem>
+          </List>
         </div>
       );
 
